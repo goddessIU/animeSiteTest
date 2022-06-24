@@ -1,9 +1,13 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
+import recommendationsReducer from '../features/recommendations/recommendationsSlice';
 import counterReducer from '../features/counter/counterSlice';
+import animeDetailReducer from '../features/animeDetail/animeDetailSlice';
 
 export const store = configureStore({
   reducer: {
+    recommendations: recommendationsReducer,
     counter: counterReducer,
+    animeDetail: animeDetailReducer
   },
 });
 
